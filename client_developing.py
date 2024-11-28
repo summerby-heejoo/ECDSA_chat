@@ -129,7 +129,7 @@ class myAES():
         keylen = int(keysize / 8)
         self.key = key[:keylen]
         hash_fn.update(ivtext.encode('utf-8'))
-        iv = hash_fn.dECigest()
+        iv = hash_fn.digest()
         self.iv = iv[:16]
 
         # 메소드 1: 메세지 채움
